@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1F4E79">
+<title>AvaliaExpert</title>
+<style>
+:root{--azul:#1F4E79;--azul-2:#2A5F8E;--ouro:#A67C00;--papel:#F7F8FA;
+  --folha:#fff;--tinta:#16202B;--tinta-2:#5A6B7C;--regua:#DCE2E9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--papel);color:var(--tinta);min-height:100vh;
+  font:400 15px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  padding:40px 18px 60px}
+.wrap{max-width:620px;margin:0 auto}
+header{text-align:center;margin-bottom:34px}
+header h1{font-size:27px;font-weight:600;color:var(--azul);letter-spacing:-.02em}
+header p{font-size:13px;color:var(--tinta-2);margin-top:6px}
+a.app{display:flex;align-items:center;gap:16px;padding:18px;margin-bottom:12px;
+  background:var(--folha);border:1.5px solid var(--regua);border-radius:10px;
+  text-decoration:none;color:inherit;transition:border-color .12s,box-shadow .12s}
+a.app:hover{border-color:#B4C6E7;box-shadow:0 2px 12px rgba(20,32,44,.08)}
+a.app img{width:58px;height:58px;border-radius:13px;flex:none}
+a.app b{display:block;font-size:17px;color:var(--azul);font-weight:600}
+a.app span{display:block;font-size:12.5px;color:var(--tinta-2);margin-top:3px}
+a.app .seta{margin-left:auto;color:#B4C6E7;font-size:22px;flex:none}
+.nota{margin-top:26px;padding:15px 17px;background:#EEF2F7;border-radius:8px;
+  font-size:12.5px;color:var(--tinta-2);line-height:1.6}
+.nota b{color:var(--azul)}
+footer{margin-top:30px;text-align:center;font-size:11.5px;color:var(--tinta-2)}
+@media(prefers-color-scheme:dark){
+  :root{--papel:#121920;--folha:#1A232D;--tinta:#E8EDF2;--tinta-2:#9AAAB8;--regua:#2C3845}
+  header h1,a.app b,.nota b{color:#8FBCE4}
+  .nota{background:#1A232D}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>AvaliaExpert</h1>
+    <p>Avaliação de imóveis urbanos · ABNT NBR 14653 · IBAPE-SP</p>
+  </header>
+
+  <a class="app" href="AvaliaExpert.html">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAMAAABlApw1AAAAkFBMVEX////g5+zpsjznsj14kJ4qXo0pXowpXYsfZYg1WnUoXIooW4gnW4gnWocnWoYnWYYmWYUmWIQmWIMmV4MlV4MlVoEkVX8jVH4jU30iUXohUHggTnYfTXQfTHIeTHMeS3AdSm8hSG0dSW8dSW4dSWsdSG0cSG0cR2wcR2scRmobRmobRWkaRWgePm0AAP8AAAA47asYAAADkElEQVR42u3dfVfaMBTH8RSSPvGgw+Hm00SYolLM+393A5m1QJMbbXd6f/N+/12OuR/a2s0zT5SlMpti000pOZ1V3j9NTfc1ABgufQqQGk59GNDZXe8ojj8GMAzLwwEbL8dMIOAlZpsJAZiYczQgYT1/zTU4AMTcO/qOug+IE/6lHkAC0dAJiDEAiXEAEpiyWgDO/EleBxgAAZL4GPCSYHUESHKsRgeAHK4UHZDvAQDnz+MKYIoIyCuAPMcVbAEpKGD6BhgOMMvfAAPUzA4wwO3/AKRDaIGyoyFwWwDy/EOzAYxHwI2tMsjzj4ZWnUIDRlaNwMMHjLHbXAFwgToBDx1win8FTsETgACaAr6BJwABCAAdMAFPnYGnvoMnAAEIAB0wbbtM9/u92vp9PWl9u9YBmWP6v4YJe4B3/l5PowP63AFZjygTgACYAc7bjQa0vKEABCAAAQigGeBHu9GA6mqjnZ0FbtglYBIpd5HhD9DKVzTmDjDKn+YO0AQgCgP8bDcaUC4lAUEbCkAAAvgagHPtfGtGkeEPOI+8Oxn2AB28FVNAROxlOgRchEQBdLmSBpRLSUDQaAIQgAAEIAABCKBTwGVIJKBcSQPKpSQgaDQBCEAAAhCAAAQggCaAq5BIQLmSBpRLSUDQaAIQgAAEIAABYAOuQyIB5UoaUC4lAUGjCUAAAvgSAGqv96muqV9BeV85Df5UmgOIH09Xt/L/FlPlApAfSxYGuAnKRN5/UFaX+gR9vfdVfYJIh00WCLi5dP8XVXO4NHOtzLKDpZn7q17ctAtgmwAE0BTwCzx8wC14fsCVpv4W9M/bvNAaADof//VF/3mAViwy6AD9dQEXLJ6BKPv8Q2wYCKIGD/HmGujOy5q8BxBeZPMZdmqGDoC/Aos5duoWHTBbQHev5tiAubLYgKWy2PfQWlnse8gqW9wjtz1EZAE8/2wLeABud5AO7vzLHWCBfgWmwPPvjvP6DTr/4xvgbgnZY1EeaYcJeK4cKggJWFcAj4A97x2s+YQH2D8ZNEUb/+nu4HDZJRhgeXS87zNWNQcsQ81f1B1xjTj/HuABZv4nxynpa7QH4Oic+jXa538IsMUK6/M/AtiiWHHPegHWMh+/sBSAt2BtaYAtUG4fF4DtRShsKMCuCn6taid1ALb3Ea/pi7X9GGD7HZVRqWtKD4ALofbZDQO8Pgyd30r+ASnA9qdGHQ7/QE73B+GglSv+GASvAAAAAElFTkSuQmCC" alt="">
+    <div>
+      <b>AvaliaExpert</b>
+      <span>Avaliação, homogeneização e laudo. Para o computador.</span>
+    </div>
+    <span class="seta">›</span>
+  </a>
+
+  <a class="app" href="Vistoria.html">
+    <img src="data:image/png;base64,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" alt="">
+    <div>
+      <b>Vistorias</b>
+      <span>Vistoria em campo. Para o celular do avaliador.</span>
+    </div>
+    <span class="seta">›</span>
+  </a>
+
+  <p class="nota">
+    <b>Para instalar no celular:</b> abra o aplicativo acima e use
+    <b>Adicionar à Tela de Início</b> (iPhone, pelo Safari) ou
+    <b>Instalar aplicativo</b> (Android, pelo Chrome). Ele passa a abrir em
+    janela própria, com ícone, como qualquer outro aplicativo.
+  </p>
+  <p class="nota">
+    <b>Onde ficam os dados:</b> tudo o que você preenche fica guardado no próprio
+    aparelho, no navegador. Nada é enviado para esta página nem para o GitHub —
+    o que está publicado aqui é só o programa, nunca as avaliações.
+  </p>
+
+  <footer>LM Engenharia</footer>
+</div>
+</body>
+</html>

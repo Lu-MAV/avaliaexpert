@@ -133,6 +133,7 @@ svg.disp{display:block;width:100%;height:262px;background:var(--folha)}
 .facoes .btn{padding:2px 9px;font-size:12px}
 .facoes .btn[disabled]{opacity:.35;cursor:default}
 @media (max-width:720px){.cab p{display:none}.wrap{padding:0 12px}h1{font-size:17px}}
+
 @media print{
   body{background:#fff;padding:0}header{background:#fff;color:#000}
   .acoes,.metodos,.leitura,details.par,.btn{display:none!important}
@@ -399,6 +400,37 @@ button.semestilo{background:none;border:0;padding:0;cursor:pointer}
   background:var(--folha);border:1px solid var(--regua);border-radius:4px;margin-top:14px}
 .vazio-aba h3{font-size:16px;color:var(--azul);margin-bottom:8px}
 .vazio-aba p{font-size:13px;max-width:470px;margin:0 auto 16px;line-height:1.55}
+
+/* ---------- celular ----------
+   O AvaliaExpert é de mesa, mas ela abre no celular para consultar. Sem isto
+   a fileira de botões do cabeçalho não quebra linha e empurra a página para
+   843 px numa tela de 390: tudo fica cortado e a página rola de lado. */
+@media (max-width:640px){
+  body{padding-bottom:84px}
+  header{padding-top:12px}
+  header .wrap{gap:10px}
+  header h1{font-size:16px}
+  header h1 small{font-size:11px;line-height:1.35}
+  /* os botões passam a ocupar quantas linhas precisarem */
+  .acoes{flex-wrap:wrap;justify-content:flex-start;gap:6px;width:100%}
+  .acoes .btn{padding:7px 11px;font-size:12.5px}
+  .selo-salvo{width:100%;order:-1}
+  /* a barra de abas: a trilha rola, e o botão de Excel desce para a linha
+     de baixo em vez de espremer as abas em 249 px */
+  nav.abas .wrap{flex-wrap:wrap;padding:0 12px 8px}
+  /* sem recuo negativo: ele empurrava a página 12 px para fora da tela */
+  nav.abas .trilha{flex:1 0 100%;min-width:0;margin:0}
+  .xls-aba{margin:6px 0 0;align-self:stretch}
+  .aba{padding:11px 12px 9px;font-size:13px}
+  /* nada pode estourar a largura da tela */
+  .folha{padding:10px}
+  .folha .caixa{padding:16px 14px;max-height:92vh}
+  .grade-entrada{grid-template-columns:1fr}
+  .cartoes{grid-template-columns:1fr}
+  .rodape{font-size:12px}
+  table{font-size:12px}
+}
+
 </style>
 
 <!-- ===== ÍCONE E INSTALAÇÃO NA TELA DO CELULAR =====
